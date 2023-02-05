@@ -3,7 +3,7 @@ extends Node # instancia a classe Node2D
 var status = 1  ## determina a condição do jogo : jogando ou parado
 var vscore = 0  ## essa variável determina o score do jogo, aumentando a cada vez que o dragão passa uma coluna
 var x = 3   ## essa variável controla a posição do cenário, movendo-se horizontalmente
-var y = 1.5 ## essa variável controla posição do dragãpo em relação à vertical
+var y = 0.5 ## essa variável controla posição do dragãpo em relação à vertical
 
 # executa essa função ao carregar o jogo
 func _ready():
