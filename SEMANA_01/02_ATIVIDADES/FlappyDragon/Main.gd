@@ -1,9 +1,9 @@
 extends Node # instancia a classe Node2D
 
-var status = 1
-var vscore = 0
-var x = 1.5 
-var y = 1.5 
+var status = 1  ## determina a condição do jogo : jogando ou parado
+var vscore = 0  ## essa variável determina o score do jogo, aumentando a cada vez que o dragão passa uma coluna
+var x = 3   ## essa variável controla a posição do cenário, movendo-se horizontalmente
+var y = 1.5 ## essa variável controla posição do dragãpo em relação à vertical
 
 # executa essa função ao carregar o jogo
 func _ready():
@@ -18,14 +18,14 @@ func _process(delta):
 		
 		# movimenta o cenário do fundo
 		$background.position.x -= 1*x
-		if ($background.position.x) < -200:
+		if ($background.position.x) < -400: ## o cenário foi alterada para modificar a velocidade do dragão em relação ao cenário
 			$background.position.x = 600
 			
 		# movimenta as colunas para colisão
 		$columns.position.x -= 2*x
 		if ($columns.position.x) < -550:
-			$columns.position.x = rand_range(0, 350) - 50
-			$columns.position.y = rand_range(0, 400) - 200
+			$columns.position.x = rand_range(0, 350) - 100 ## a velocidade das colunas foi alterada para aumentar a velocidade do dragão em relação às colunas
+			$columns.position.y = rand_range(0, 400) - 250
 		
 		# puxa o dragão para baixo
 		$dragon.position.y += y
@@ -41,11 +41,11 @@ func _process(delta):
 			
 		# se apertou seta para baixo, aumenta o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_down"):
-			$dragon.position.y += 2
+			$dragon.position.y +=15 # a velodicade do dragão para descer foi alterada
 
 		# se apertou seta para cima, diminui o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_up"):
-			$dragon.position.y -= 4
+			$dragon.position.y -= 7.5 # a velocidade do dragão para subir foi alterada
 			
 	elif status == 0: # parado
 		

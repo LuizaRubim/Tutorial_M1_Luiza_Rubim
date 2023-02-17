@@ -1,0 +1,131 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://tela incial.gd" type="Script" id=1]
+[ext_resource path="res://fundo.jpg" type="Texture" id=2]
+
+[node name="tela incial" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Fundo" type="Sprite" parent="."]
+modulate = Color( 0.486275, 0.152941, 0.152941, 1 )
+position = Vector2( 647.652, 387.5 )
+scale = Vector2( 1.08192, 0.96125 )
+texture = ExtResource( 2 )
+
+[node name="adicionar_valor" type="Button" parent="."]
+margin_left = 106.423
+margin_top = 331.586
+margin_right = 228.423
+margin_bottom = 359.586
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 64.4231, 2.5862 )
+text = "adicionar à lista"
+clip_text = true
+icon_align = 1
+
+[node name="botao_mostrar_lista" type="Button" parent="."]
+margin_left = 245.0
+margin_top = 412.0
+margin_right = 366.0
+margin_bottom = 439.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 64.4231, 2.5862 )
+text = "mostrar lista"
+clip_text = true
+icon_align = 1
+
+[node name="Lista_pronta" type="Button" parent="."]
+margin_left = 109.423
+margin_top = 259.586
+margin_right = 229.423
+margin_bottom = 289.586
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 64.4231, 2.5862 )
+text = "lista pronta"
+icon_align = 1
+
+[node name="add_texto" type="Button" parent="."]
+margin_left = 422.423
+margin_top = 261.586
+margin_right = 532.423
+margin_bottom = 291.586
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 64.4231, 2.5862 )
+text = "exibir texto"
+icon_align = 1
+
+[node name="add_número" type="Button" parent="."]
+margin_left = 422.423
+margin_top = 332.586
+margin_right = 532.423
+margin_bottom = 362.586
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 64.4231, 2.5862 )
+text = "exibir número"
+icon_align = 1
+
+[node name="input_usuário" type="LineEdit" parent="."]
+margin_left = 133.0
+margin_top = 127.0
+margin_right = 468.0
+margin_bottom = 214.0
+align = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 217.0
+margin_top = 57.0
+margin_right = 315.0
+margin_bottom = 93.0
+rect_scale = Vector2( 2, 2 )
+text = "Digite aqui:"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 607.0
+margin_top = 127.0
+margin_right = 1013.0
+margin_bottom = 328.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Para exibir a lista pronta, clique em \"lista pronta\".
+
+Para criar uma lista, digite um valor no ícone de 
+input e clique no botão \"adicionar à lista\". 
+Para exibi-la, basta clicar no botão mostrar lista.
+
+Para exibir um texto na tela, digite no ícone de 
+input e clique no botão \"exibir texto\".
+
+Faça o mesmo para exbir um número,
+mas clique no botão \"exibir número\" 
+ao invés de \"exibir texto.\""
+align = 1
+valign = 1
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 70.0
+margin_top = 490.0
+margin_right = 553.0
+margin_bottom = 631.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="resposta_soma" type="RichTextLabel" parent="ColorRect3"]
+modulate = Color( 0.0235294, 0, 0, 1 )
+self_modulate = Color( 0.0431373, 0, 0, 1 )
+margin_left = 36.0
+margin_top = 27.0
+margin_right = 375.0
+margin_bottom = 124.0
+bbcode_text = "lkldlnkkknlnnkl"
+text = "lkldlnkkknlnnkl"
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="pressed" from="adicionar_valor" to="." method="_on_adicionar_valor_pressed"]
+[connection signal="pressed" from="botao_mostrar_lista" to="." method="_on_botao_mostrar_lista_pressed"]
+[connection signal="pressed" from="Lista_pronta" to="." method="_on_Lista_pronta_pressed"]
+[connection signal="pressed" from="add_texto" to="." method="_on_add_texto_pressed"]
+[connection signal="pressed" from="add_número" to="." method="_on_add_nmero_pressed"]
