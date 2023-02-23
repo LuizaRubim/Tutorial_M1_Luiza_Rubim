@@ -30,4 +30,3 @@ func _on_add_nmero_pressed():
 	numero = float($"input_usuário".text)
 	$"input_usuário".text = ""
 	$ColorRect3/resposta_soma.text =str(numero)
-	
