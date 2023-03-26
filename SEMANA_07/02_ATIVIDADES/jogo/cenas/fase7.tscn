@@ -1,0 +1,173 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://HandWriting.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/fase7.gd" type="Script" id=2]
+[ext_resource path="res://imagens/tv.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 9
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="fase7" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 125.0
+margin_top = 37.0
+margin_right = 850.0
+margin_bottom = 142.0
+custom_fonts/font = SubResource( 1 )
+text = "Assista ao vídeo abaixo para avançar para o desafio final"
+align = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 62.0
+margin_top = 63.0
+margin_right = 124.0
+margin_bottom = 114.0
+custom_fonts/font = SubResource( 1 )
+text = "7)"
+align = 1
+autowrap = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 482, 323 )
+scale = Vector2( 0.946629, 0.946629 )
+texture = ExtResource( 3 )
+
+[node name="creditos" type="Button" parent="."]
+margin_left = 445.0
+margin_top = 16.0
+margin_right = 552.0
+margin_bottom = 43.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Godot não roda"
+icon_align = 1
+expand_icon = true
+
+[node name="play" type="Button" parent="."]
+margin_left = 472.0
+margin_top = 412.0
+margin_right = 514.0
+margin_bottom = 458.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon_align = 1
+expand_icon = true
+
+[node name="forward" type="Button" parent="."]
+margin_left = 548.0
+margin_top = 408.0
+margin_right = 590.0
+margin_bottom = 447.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon_align = 1
+expand_icon = true
+
+[node name="backward" type="Button" parent="."]
+margin_left = 406.0
+margin_top = 413.0
+margin_right = 448.0
+margin_bottom = 452.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon_align = 1
+expand_icon = true
+
+[node name="pause" type="Button" parent="."]
+margin_left = 348.0
+margin_top = 412.0
+margin_right = 390.0
+margin_bottom = 451.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon_align = 1
+expand_icon = true
+
+[node name="parar" type="Button" parent="."]
+margin_left = 606.0
+margin_top = 409.0
+margin_right = 648.0
+margin_bottom = 448.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon_align = 1
+expand_icon = true
+
+[node name="erro" type="Button" parent="."]
+margin_left = 713.0
+margin_top = 89.0
+margin_right = 835.0
+margin_bottom = 142.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon_align = 1
+expand_icon = true
+
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="forward" to="." method="_on_forward_pressed"]
+[connection signal="pressed" from="backward" to="." method="_on_backward_pressed"]
+[connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="parar" to="." method="_on_parar_pressed"]
+[connection signal="pressed" from="erro" to="." method="_on_erro_pressed"]

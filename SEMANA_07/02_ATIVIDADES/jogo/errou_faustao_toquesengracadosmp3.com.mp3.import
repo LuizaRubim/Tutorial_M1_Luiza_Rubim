@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/errou_faustao_toquesengracadosmp3.com.mp3-ab0b86d521c67fb35f998410f3218e32.mp3str"
+
+[deps]
+
+source_file="res://errou_faustao_toquesengracadosmp3.com.mp3"
+dest_files=[ "res://.import/errou_faustao_toquesengracadosmp3.com.mp3-ab0b86d521c67fb35f998410f3218e32.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

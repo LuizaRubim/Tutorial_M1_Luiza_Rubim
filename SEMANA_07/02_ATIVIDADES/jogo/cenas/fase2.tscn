@@ -1,0 +1,151 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://HandWriting.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://scripts/fase2.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="fase2" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 247.0
+margin_top = 50.0
+margin_right = 807.0
+margin_bottom = 119.0
+custom_fonts/font = SubResource( 1 )
+text = "Ache o erro do Godot"
+align = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 40.0
+margin_top = 60.0
+margin_right = 102.0
+margin_bottom = 165.0
+custom_fonts/font = SubResource( 1 )
+text = "2)"
+align = 1
+autowrap = true
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 685.16, 7.63841 )
+rotation = -0.00872665
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+offset = Vector2( -56.3298, 69.6316 )
+
+[node name="alternativa1" type="Button" parent="."]
+margin_left = 43.0
+margin_top = 363.0
+margin_right = 505.0
+margin_bottom = 436.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "não tá centralizado"
+icon_align = 1
+expand_icon = true
+
+[node name="alternativa4" type="Button" parent="."]
+margin_left = 552.0
+margin_top = 357.0
+margin_right = 974.0
+margin_bottom = 444.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "não está na cor certa"
+icon_align = 1
+expand_icon = true
+
+[node name="alternativa3" type="Button" parent="."]
+margin_left = 549.0
+margin_top = 466.0
+margin_right = 974.0
+margin_bottom = 549.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "todos"
+icon_align = 1
+expand_icon = true
+
+[node name="alternativa2" type="Button" parent="."]
+margin_left = 44.0
+margin_top = 462.0
+margin_right = 516.0
+margin_bottom = 551.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "está 1° para a direita"
+icon_align = 1
+expand_icon = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 430.0
+margin_top = 287.0
+margin_right = 609.0
+margin_bottom = 307.0
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0.278431, 0.54902, 0.74902, 1 )
+custom_colors/font_color_pressed = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+text = "não tem"
+
+[connection signal="pressed" from="alternativa1" to="." method="_on_alternativa1_pressed"]
+[connection signal="pressed" from="alternativa4" to="." method="_on_alternativa4_pressed"]
+[connection signal="pressed" from="alternativa3" to="." method="_on_alternativa3_pressed"]
+[connection signal="pressed" from="alternativa2" to="." method="_on_alternativa2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

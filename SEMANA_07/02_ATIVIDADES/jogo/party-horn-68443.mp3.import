@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/party-horn-68443.mp3-58db468c35bcb2aa5ff8faf9615f96fb.mp3str"
+
+[deps]
+
+source_file="res://party-horn-68443.mp3"
+dest_files=[ "res://.import/party-horn-68443.mp3-58db468c35bcb2aa5ff8faf9615f96fb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

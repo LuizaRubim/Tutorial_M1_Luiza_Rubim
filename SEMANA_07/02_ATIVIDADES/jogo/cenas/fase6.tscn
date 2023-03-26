@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/fase6.gd" type="Script" id=1]
+[ext_resource path="res://HandWriting.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[node name="fase6" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 152.0
+margin_top = 37.0
+margin_right = 877.0
+margin_bottom = 142.0
+custom_fonts/font = SubResource( 1 )
+text = "Qual das funções abaixo não existe no Godot?"
+align = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 39.0
+margin_top = 59.0
+margin_right = 101.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 1 )
+text = "6)"
+align = 1
+autowrap = true
+
+[node name="alternativa1" type="Button" parent="."]
+margin_left = 133.0
+margin_top = 164.0
+margin_right = 892.0
+margin_bottom = 237.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "ser feliz"
+icon_align = 1
+expand_icon = true
+
+[node name="alternativa4" type="Button" parent="."]
+margin_left = 131.0
+margin_top = 472.0
+margin_right = 894.0
+margin_bottom = 546.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "transformar uma constante em variável"
+icon_align = 1
+expand_icon = true
+
+[node name="alternativa3" type="Button" parent="."]
+margin_left = 134.0
+margin_top = 358.0
+margin_right = 890.0
+margin_bottom = 446.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "simular a exportação HTML"
+icon_align = 1
+expand_icon = true
+
+[node name="alternativa2" type="Button" parent="."]
+margin_left = 134.0
+margin_top = 248.0
+margin_right = 891.0
+margin_bottom = 333.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "poder mudar a textura de um label"
+icon_align = 1
+expand_icon = true
+
+[connection signal="pressed" from="alternativa1" to="." method="_on_alternativa1_pressed"]
+[connection signal="pressed" from="alternativa4" to="." method="_on_alternativa4_pressed"]
+[connection signal="pressed" from="alternativa3" to="." method="_on_alternativa3_pressed"]
+[connection signal="pressed" from="alternativa2" to="." method="_on_alternativa2_pressed"]

@@ -1,0 +1,145 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/Tela_inicial.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://HandWriting.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=8]
+size = 90
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 14
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="tela_inicial" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 512, 269 )
+scale = Vector2( 9.73438, 4.46875 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 283.0
+margin_top = 27.0
+margin_right = 741.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 8 )
+text = "Godot quiz"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 424.0
+margin_top = 443.0
+margin_right = 572.0
+margin_bottom = 535.0
+
+[node name="perdeu" type="Button" parent="VBoxContainer"]
+margin_right = 148.0
+margin_bottom = 15.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 1 )
+text = "perdeu"
+icon_align = 1
+expand_icon = true
+
+[node name="regras do jogo" type="Button" parent="VBoxContainer"]
+margin_top = 19.0
+margin_right = 148.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 1 )
+text = "regras (ou não)"
+icon_align = 1
+expand_icon = true
+
+[node name="comecar" type="Button" parent="VBoxContainer"]
+margin_top = 38.0
+margin_right = 148.0
+margin_bottom = 53.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 1 )
+text = "(começar)"
+icon_align = 1
+expand_icon = true
+
+[node name="sair" type="Button" parent="VBoxContainer"]
+margin_top = 57.0
+margin_right = 148.0
+margin_bottom = 72.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 1 )
+text = "saia"
+icon_align = 1
+expand_icon = true
+
+[node name="nariz" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 501.0
+margin_top = 269.0
+margin_right = 523.0
+margin_bottom = 289.0
+custom_fonts/font = SubResource( 9 )
+icon_align = 1
+expand_icon = true
+
+[node name="creditos" type="Button" parent="."]
+margin_left = 961.0
+margin_top = 580.0
+margin_right = 1025.0
+margin_bottom = 600.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "créditos"
+icon_align = 1
+expand_icon = true
+
+[connection signal="pressed" from="VBoxContainer/perdeu" to="." method="_on_perdeu_pressed"]
+[connection signal="pressed" from="VBoxContainer/regras do jogo" to="." method="_on_regras_do_jogo_pressed"]
+[connection signal="pressed" from="VBoxContainer/comecar" to="." method="_on_comecar_pressed"]
+[connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="nariz" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
