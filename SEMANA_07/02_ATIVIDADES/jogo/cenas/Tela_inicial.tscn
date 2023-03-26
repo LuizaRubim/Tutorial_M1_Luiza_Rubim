@@ -111,17 +111,6 @@ text = "saia"
 icon_align = 1
 expand_icon = true
 
-[node name="nariz" type="Button" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 501.0
-margin_top = 269.0
-margin_right = 523.0
-margin_bottom = 289.0
-custom_fonts/font = SubResource( 9 )
-icon_align = 1
-expand_icon = true
-
 [node name="creditos" type="Button" parent="."]
 margin_left = 961.0
 margin_top = 580.0
@@ -141,5 +130,4 @@ expand_icon = true
 [connection signal="pressed" from="VBoxContainer/regras do jogo" to="." method="_on_regras_do_jogo_pressed"]
 [connection signal="pressed" from="VBoxContainer/comecar" to="." method="_on_comecar_pressed"]
 [connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]
-[connection signal="pressed" from="nariz" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]

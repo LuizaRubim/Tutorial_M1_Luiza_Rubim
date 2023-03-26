@@ -1,6 +1,6 @@
 extends Node2D
 
-#muda a cena para uma cena secreta quansdo o botão camuflado no nariz é pressionado
+#muda a cena para uma cena secreta quando o botão camuflado no nariz é pressionado
 func _on_Button_pressed():
 	get_tree().change_scene("res://cenas/nariz.tscn")
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://cenas/parabens.gd" type="Script" id=1]
+[ext_resource path="res://scripts/parabens.gd" type="Script" id=1]
 [ext_resource path="res://HandWriting.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://imagens/confete.png" type="Texture" id=4]
